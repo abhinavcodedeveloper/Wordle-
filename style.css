@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    background-image: url('./Images/6a3a9aa650f610536f40bedc3e988365.jpg');
+    background-color: black;
+}
+
+.gamekanaam {
+    margin-top: 2rem;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+
+#board {
+    width: 400px;
+    height: 400px;
+    /* background-color: chartreuse; */
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.lastword {
+    position: absolute;
+    color: black;
+    right: 11.5rem;
+    top: 21rem; 
+    animation: animate 2sec ease-in-out forwards;
+}
+
+/* @keyframes word {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+} */
+
+a{
+    margin-top: 2rem;
+    position: relative;
+    
+    display: inline-block;
+    padding: 10px 15px;
+    color: #03e9f4;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    overflow: hidden;
+    letter-spacing: 4px ;
+}
+
+a:hover{
+    background-color:#03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+}
+
+a span:nth-child(1){
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: spananimate 1s linear infinite;
+}
+a span:nth-child(2){
+    position: absolute;
+    display: block;
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: spananimate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+a span:nth-child(3){
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: spananimate3 1s linear infinite;
+    animation-delay: 0.55s;
+}
+a span:nth-child(4){
+    position: absolute;
+    display: block;
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: spananimate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes spananimate {
+    0%{
+        left: -100%;
+    }
+
+    50%{
+        left: 100%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+@keyframes spananimate2 {
+    0%{
+        top: -100%;
+    }
+
+    50%{
+        top: 100%;
+    }
+    100%{
+        top: 100%;
+    }
+}
+@keyframes spananimate3 {
+    0%{
+        right: -100%;
+    }
+
+    50%{
+        right: 100%;
+    }
+    100%{
+        right: 100%;
+    }
+}
+@keyframes spananimate4 {
+    0%{
+        bottom: -100%;
+    }
+
+    50%{
+        bottom: 100%;
+    }
+    100%{
+        bottom: 100%;
+    }
+}
+
+#reload:hover{
+    cursor: pointer;
+
+}
+
+.miniBoxes {
+    height: 4rem;
+    width: 4rem;
+    border: 3px solid rgb(255, 255, 255);
+    /* Now in order to give space between them */
+    margin: 4px;
+    color: rgb(255, 253, 253);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.correct {
+    color: black;
+  background-color: rgb(93, 219, 61);
+  animation: animate 0.5s ease-in-out forwards;
+
+}
+
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: scale(0) translateY(1px);
+    }
+
+    /* 50%{
+        opacity: 0.5;
+    } */
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+
+.rightguessbutnotcorrect {
+    background-color: rgb(231, 231, 25);
+    color: black;
+  animation: animate 0.5s ease-in-out forwards;
+
+}
+
+.wrong {
+    background-color: grey;
+    color: black;
+  animation: animate 0.5s ease-in-out forwards;
+
+}
+
+#answer{
+    position: absolute;
+    right: 4rem;
+    top: 3rem;
+    animation: animate1 2s ease-in;
+}
+
+@keyframes animate1 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.answer{
+    width: 350px;
+    height: 550px;
+    position: absolute;
+    top: 5rem;
+    right: 4rem;
+}
+
+
+#cloudimg{
+    display: none;
+}
+
+.cloudimganimation{
+    animation: sahi 2sec ease-in-out ;
+}
+
+@keyframes sahi{
+    0%{
+        opacity: 0;
+        transform: scale(0) translateY(1px);
+
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
